@@ -16,13 +16,13 @@
 
 ### Ход выполнения домашнего задания
 
-1) Добавить репозиторий Zabbix;
+1) Добавить репозиторий Zabbix:
 
 ```wget https://repo.zabbix.com/zabbix/6.0/debian/pool/main/z/zabbix-release/zabbix-release_6.0-1+debian11_all.deb```
 
 ```dpkg -i zabbix-release_6.0-1+debian11_all.deb```
 
-3) Установка сервера Zabbix
+3) Установка требуемых пакетов:
 
 ```apt update -y```
 
@@ -30,15 +30,15 @@
 
 5) Установить часовой пояс:
 
-#Редактируем файл
+#редактируем файл
 
 ```vi /etc/php/7.4/apache2/php.ini```
 
-#Изменяем следующую строку:
+#изменяем следующую строку:
 
 date.timezone = UTC
 
-6) Установка и настройка базы данных
+6) Установка и настройка базы данных:
 
 #устанавливаем базу данных
 
@@ -62,7 +62,7 @@ date.timezone = UTC
 
 ```EXIT;```
 
-8) Меняем конфиг Zabbix
+8) Меняем конфиг Zabbix:
 
 /etc/zabbix/zabbix_server.conf
 
@@ -78,7 +78,7 @@ DBPassword=password
 
 ```zcat /usr/share/zabbix-sql-scripts/mysql/server.sql.gz | mysql -u zabbix -p zabbix```
 
-#Перезагружаем службы
+#перезагружаем службы
 
 ```systemctl restart apache2```
 

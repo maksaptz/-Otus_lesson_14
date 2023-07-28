@@ -28,7 +28,7 @@
 
 ```apt install zabbix-server-mysql zabbix-frontend-php zabbix-apache-conf zabbix-sql-scripts zabbix-agent zabbix-frontend-php zabbix-apache-conf -y```
 
-5) Установить часовой пояс:
+5) Установовка часового пояс:
 
 #редактируем файл
 
@@ -47,8 +47,6 @@ date.timezone = UTC
 #заходим в базу
 
 ```mysql -u root -p```
-
-7) После входа создайте базу данных и пользователя для Zabbix:
 
 #создаем базу и пользователя
 
